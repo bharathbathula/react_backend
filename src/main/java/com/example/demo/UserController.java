@@ -27,7 +27,7 @@ public class UserController {
         return userRepo.findAll();
     }
 
-    @PostMapping("/register")
+    @PostMapping("/reg")
     public ResponseEntity<String> registerUser(@RequestBody Users user) {
         Users u = this.userRepo.findByEmail(user.getEmail());
         if (u != null) {
